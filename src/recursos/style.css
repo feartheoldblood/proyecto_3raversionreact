@@ -1,0 +1,35 @@
+.container{
+    width: 90%;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    max-width: 1200px;
+    box-shadow: 0 2px 20px black (0,0,0,.1);
+    border-radius: 10px;
+}
+
+.dias{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    place-items: center;
+    height: 70px;
+    border-bottom: 3px solid rgb(210, 14, 14);
+    border-top: 3px solid rgb(255, 255, 255);
+    color: black;
+}
+
+.calendario{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-auto-rows: 75px;
+}
+
+.calendario_dias{
+    border-bottom: 1px solid rgb(205, 205, 205);
+    border-top: 1px solid rgb(205, 205, 205);
+    padding: 20px 30px;
+    color: black;
+}
+.icons_mine{
+    width: 40px;
+    height: 40px;
+}

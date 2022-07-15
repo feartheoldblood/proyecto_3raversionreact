@@ -1,0 +1,179 @@
+body{
+    font-family: 'Questrial', sans-serif;
+    color: #333;
+    font-size: 1.2rem;
+    line-height: 1.3em;
+    margin: 0;
+}
+
+
+.container-encabezado{
+    width: 85%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2rem;
+    line-height: 1.3em;
+}
+
+.encabezado{
+    background-color: #333;
+    color: white;
+    padding: 2rem 0;
+    
+}
+
+
+.encabezado a{
+    color: white;
+    text-decoration: none;
+}
+
+
+.bienvenida-nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+.docs a {
+    outline: none;
+    text-decoration: none;
+    color: #333;
+    
+}
+
+.docs a:hover {
+    border-bottom: 1px solid;
+    background-color: aquamarine;
+    
+}
+
+
+.navegacion ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Questrial', sans-serif;
+}
+
+.navegacion ul li{
+    display: inline-block;
+}
+
+.navegacion ul li a{
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+}
+
+.navegacion ul li a:hover{
+    color: greenyellow;
+    background: #4a4a4a
+}
+
+.bienvenida{
+    font-size: 1.3em;
+    letter-spacing: 2px;   
+    font-weight: bold; 
+    font-family: 'Questrial', sans-serif;
+
+}
+
+.cita_medica{
+    font-size: 1.3em;     
+    font-family: 'Questrial', sans-serif;
+
+}
+
+#cerrar_sesion a:hover{
+    color: #F65555;
+}
+
+.container_main{
+    width: 100%;
+    max-width: 1500px;
+    margin: 20px auto;
+}
+
+
+.container_cita_medica{
+    width: 85%;
+    max-width: 1450px;
+    margin: 20px auto;
+}
+
+
+img{
+    margin: 10px;
+    
+}
+
+.img_perfil{
+    margin: 5px;
+    
+}
+
+.estrellas_doctor{
+    margin: 0px 0px auto;
+    width: 25px;
+    height: 25px;
+    
+}
+
+.busqueda_doctor{
+    margin: 10px;
+    width: 55px;
+    height: 55px;
+}
+
+
+.container_inicio_sesion{
+    width: 85%;
+    max-width: 1000px;
+    margin: 250px auto;
+}
+
+
+#iniciar_sesion{
+    margin: 20px;
+}
+
+
+.container_registro{
+    max-width: 1000px;
+    margin: 200px auto;
+}
+
+#subtitulo_cursiva{
+    font-style: oblique;
+}
+
+
+#foto_perfil{
+    width: 250px;
+    height: 170px;
+    
+}
+
+#btn_editar{
+    margin: 10px auto;
+    
+
+}
+
+#cont_perfil{
+    background-color: white;
+    box-shadow: 2px 2px 20px gray;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    
+}
+
+
