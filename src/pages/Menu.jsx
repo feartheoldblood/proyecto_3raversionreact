@@ -59,25 +59,25 @@ function Menu(){
       <div className="container" id="inicio">
         <div className="row" id="inicio">
             <div className="col-lg-3"  id="inicio">
-            <img src={doctor_neumologo} className="dr"/>
+            <img src={doctor_neumologo} className="dr" alt=''/>
         
             </div>
             <div className="col-lg-6" id="inicio">
             <h1 >Dr. Christian Moore</h1>
               <div className="row">
-                <div className="col-lg-2"><img src={icon_email} className="logo"/></div>
+                <div className="col-lg-2"><img src={icon_email} className="logo" alt=' '/></div>
                 <div className="col-lg-7">
                   <p><b>Chrisitan_moore@gmail.com</b></p>
                 </div>
               </div>
               <div className="row">
-                <div className="col-lg-2"><img src={icon_email} className="logo"/></div>
+                <div className="col-lg-2"><img src={icon_email} className="logo" alt=' '/></div>
                 <div className="col-lg-7">
                   <p><b>990226110</b></p>
                 </div>
               </div>
               <div className="row">
-                <div className="col-lg-2"><img src={location_icon} className="logo"/></div>
+                <div className="col-lg-2"><img src={location_icon} className="logo" alt=' '/></div>
                 <div className="col-lg-7">
                   <p><b>Pediatra</b></p>
                 </div>
@@ -87,34 +87,34 @@ function Menu(){
        <div className="row ">
         <div className="col-lg-3" >
           <h2 className="kind">Consultorio</h2>
-          <div className="row" id="comp_consult"><img src={location_icon} className="logo"/>
+          <div className="row" id="comp_consult"><img src={location_icon} className="logo" alt=' ' />
             Av.Javier Prado 1721
             </div>
           
-          <div className="row" id="comp_consult"><img src={location_icon} className="logo"/>
+          <div className="row" id="comp_consult"><img src={location_icon} className="logo" alt=' '/>
             Av.Arequipa 1209
             </div>
           
           
           
-          <div className="row" id="comp_consult"><img src={money} className="logo"/>
+          <div className="row" id="comp_consult"><img src={money} className="logo" alt=' '/>
             Consulta virtual: S/.50
             </div>
-          <div className="row" id="comp_consult"><img src={money}  className="logo"/>
+          <div className="row" id="comp_consult"><img src={money}  className="logo" alt=' '/>
             Consulta presencial: S/.100
             </div>
           
-          <div className="row" id="comp_consult"><img src={money}  className="logo"/>
+          <div className="row" id="comp_consult"><img src={money}  className="logo" alt=' '/>
             Nro. De cuenta Soles Bcp:
             </div>
              
             <p>6545-8465-4646-4656</p> 
-          <div className="row" id="comp_consult"><img src={card} className="logo"/>
+          <div className="row" id="comp_consult"><img src={card} className="logo" alt=' '/>
             Nro. Banco de la Nacion: 
             </div>
             
             <p>4556-3992-1354-3134</p> 
-          <div className="row" id="comp_consult"><img src={card} className="logo"/>
+          <div className="row" id="comp_consult"><img src={card} className="logo" alt=' '/>
             Disponibilidad de atención:
             <p>LUNES-SABADO. 8:00AM-18:00PM</p>
             </div>
@@ -158,10 +158,10 @@ function Menu(){
           </p>
           <div className="centrar_estrella" >
             
-              <img src={black_star} />
-              <img src={black_star} />
-              <img src={black_star} />
-              <img src={black_star} />
+              <img src={black_star} alt=' '/>
+              <img src={black_star} alt=' '/>
+              <img src={black_star} alt=' '/>
+              <img src={black_star} alt=' '/>
 
           </div> 
           <h5>Juan Perez</h5>
@@ -169,31 +169,31 @@ function Menu(){
           </p>
           <div className="centrar_estrella" >
             
-          <img src={black_star} />
-          <img src={black_star} />
-          <img src={black_star} />
-          <img src={black_star} />
-          <img src={black_star} />
+          <img src={black_star} alt=' '/>
+          <img src={black_star} alt=' '/>
+          <img src={black_star} alt=' '/>
+          <img src={black_star} alt=' '/>
+          <img src={black_star} alt=' '/>
           </div> 
           <h5>Juan Perez</h5>
           <p>onsectetur dui egestas odio proin faucibus libero potenti metus sem lobortis blandit senectus.
           </p>
           <div className="centrar_estrella" >
-            <img src={black_star} />
-          <img src={black_star} />
-          <img src={black_star} />
-          <img src={black_star} />
-          <img src={black_star} />
+            <img src={black_star} alt=' '/>
+          <img src={black_star} alt=' '/>
+          <img src={black_star} alt=' '/>
+          <img src={black_star} alt=' '/>
+          <img src={black_star} alt=' '/>
           </div> 
           <h5>Juan Perez</h5>
           <p>onsectetur dui egestas odio proin faucibus libero potenti metus sem lobortis blandit senectus.
           </p>
           <div className="centrar_estrella" >
-          <img src={black_star} />
-          <img src={black_star} />
-          <img src={black_star} />
-          <img src={black_star} />
-          <img src={black_star} />
+          <img src={black_star} alt=' '/>
+          <img src={black_star} alt=' '/>
+          <img src={black_star} alt=' '/>
+          <img src={black_star} alt=' '/>
+          <img src={black_star} alt=' '/>
           </div> 
           <h5>Juan Perez</h5>
 
