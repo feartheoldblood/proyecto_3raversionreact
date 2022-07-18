@@ -1,0 +1,20 @@
+#card_historial{
+    margin: 0 auto;
+    float: none; 
+    margin-bottom: 10px;
+    max-width: 500px;
+}
+
+#foto_paciente{
+    width: 200px;
+    height: 200px;
+    
+}
+
+.collapse{
+    margin-bottom: 30px;
+}
+
+#antecedentes{
+    list-style: circle;
+}
