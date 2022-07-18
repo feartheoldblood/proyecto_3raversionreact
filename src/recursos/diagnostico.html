@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="/src/recursos/ver_historial.css">
+    <title>DIAGNOSTICO</title>
+</head>
+<body>
+    <div class="container">
+        <div id="card_historial" class="card">
+            
+            <div class="card-body">
+                <h3 class="card-title text-center">NOMBRE DE PACIENTE</h3>
+                <div class="container text-center">
+                    <img id="foto_paciente" class="img-fluid rounded-start" src="/src/recursos/imagenes/paciente_foto.jpg">    
+                </div>
+                
+                    
+                
+            
+              <p>
+                <div class="d-grid gap-2 col-8 mx-auto">
+                  <a class="btn btn-success" data-bs-toggle="collapse" href="#DIAGNOSTICO" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    DIAGNOSTICO
+                  </a>
+                </div>
+              </p>
+              <div class="collapse" id="DIAGNOSTICO">
+                <div class="card card-body">
+                    <div class="input-group">
+                        <textarea class="form-control" aria-label="With textarea"></textarea>
+                    </div>
+
+                </div>  
+              </div>
+              <p>
+                <div class="d-grid gap-2 col-8 mx-auto">
+                  <a class="btn btn-success" data-bs-toggle="collapse" href="#RECETA" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    RECETA   
+                  </a>
+                </div>
+              </p>
+              <div class="collapse" id="RECETA">
+                <div class="card card-body">
+                    <textarea class="form-control" aria-label="With textarea"></textarea>   
+                </div>  
+              </div>
+              <p>
+                <div class="d-grid gap-2 col-8 mx-auto">
+                  <a class="btn btn-success" data-bs-toggle="collapse" href="#OBSERVACIONES" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    OBSERVACIONES   
+                  </a>
+                </div>
+              </p>
+              <div class="collapse" id="OBSERVACIONES">
+                <div class="card card-body">
+                    <textarea class="form-control" aria-label="With textarea"></textarea>   
+                </div>  
+              </div>
+
+              <div class="d-grid gap-2 col-8 mx-auto">
+                <button class="btn btn-dark" type="button">GUARDAR</button>
+                
+              </div>
+            </div>
+        </div>  
+        
+        
+
+    </div>
+</body>
+</html>
