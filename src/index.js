@@ -18,6 +18,7 @@ import Calendar from './components/Calendar';
 import LoginPac from './pages/LoginPac';
 import RegistroPac from './pages/RegistroPac';
 import MisCitas from './pages/MisCitas';
+import ReservarCita from './pages/ReservarCita';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -38,6 +39,7 @@ root.render(
         <Route path='/login_paciente' element={<LoginPac/>}/>
         <Route path='/registro_pac' element={<RegistroPac/>}/>
         <Route path='/MisCitas' element={<MisCitas/>}/>
+        <Route path='/reservaCita' element={<ReservarCita/>}/>
         
      </Routes>
     </BrowserRouter>
