@@ -40,10 +40,10 @@ console.log(ListaDoctores)
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav"  style={{margintop: '15px'}}>
             <li className="nav-item active">
-              <a className="nav-link" href="/perfil.html">{ListaDoctores[0].id} </a>
+              <a className="nav-link" href="/perfil.html"> </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">{(ListaDoctores[0].nombre)}</a>
+              <a className="nav-link" href="#"></a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/#">CALENDARIO</a>
@@ -84,11 +84,11 @@ console.log(ListaDoctores)
         
             </div>
             <div className="col-lg-6" id="inicio">
-            <h1 >{ListaDoctores[0].id}</h1>
+            <h1 ><h3>{ListaDoctores[0].nombre}</h3></h1>
               <div className="row">
                 <div className="col-lg-2"><img src={icon_email} className="logo" alt=' '/></div>
                 <div className="col-lg-7">
-                  <p><b>{ListaDoctores[0].correo}</b></p>
+                  <p><b><h3>{ListaDoctores[0].id}</h3></b></p>
                 </div>
               </div>
               <div className="row">
@@ -100,7 +100,7 @@ console.log(ListaDoctores)
               <div className="row">
                 <div className="col-lg-2"><img src={location_icon} className="logo" alt=' '/></div>
                 <div className="col-lg-7">
-                  <p><b>{ListaDoctores[0].especialidad}</b></p>
+                  <p><b></b></p>
                 </div>
               </div>
             </div>
