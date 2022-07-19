@@ -20,11 +20,11 @@ export default function Calendar(){
             <FullCalendar
                  locale={esLocale}
                  plugins={[dayGridPlugin,timeGridPlugin,interactionPlugin,listPlugin]}
-                 initialView="dayGridMonth"
+                 initialView="timeGridWeek"
                  headerToolbar={{
                     left: "prev,next today",
                     center:"title",
-                    right:"dayGridMonth,timeGridWeek,listWeek"
+                    right:"timeGridWeek,dayGridMonth,listWeek"
                  }}
                  businessHours = {{
                     startTime : "7:00",

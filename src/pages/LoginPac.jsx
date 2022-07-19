@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+
 
 const mystyle = {
     margin:"auto",
@@ -7,26 +8,69 @@ const mystyle = {
     margintop:"100px"
 }
 
-function LoginPac(){
+const LoginPac = () =>{
+
+    const [todo, setTodo] = useState({
+        todoname: '',
+        todocontra:'',
+        todoCheck: false,
+    })
+    const handleSubmit = (e) => {
+        e.preventDefault()
+
+        console.log(todo)
+    };
+
+    const handleChange = e => {
+        const {name, value, checked, type} = e.target
+
+        
+
+        setTodo({
+            ...todo,
+            [name]: type === "checkbox" ? checked : value,
+        })
+    };
+
+
     return <div className="container" style={mystyle}>
-        <div className="form mt-5">
+        <form className="form mt-5" onSubmit={handleSubmit}>
             <h1>Ingresar</h1>
             <div className="form-outline mb-4 mt-4">
-                <input type="email" id="form2Example1" className="form-control" />
-                <label className="form-label" for="form2Example1">Correo Electronico</label>
+                <input 
+                    name="todoname" 
+                    type="email" id="form2Example1" 
+                    className="form-control" 
+                    onChange={handleChange}
+                    value={todo.todoname}
+                />
+                <label className="form-label">Correo Electronico</label>
             </div>
 
             <div className="form-outline mb-4">
-                <input type="password" id="form2Example2" className="form-control" />
-                <label className="form-label" for="form2Example2">Contraseña</label>
+                <input 
+                    name="todocontra" 
+                    type="password" 
+                    id="form2Example2" 
+                    className="form-control"
+                    onChange={handleChange}
+                    value={todo.todocontra} 
+                />
+                <label className="form-label">Contraseña</label>
             </div>
 
             <div className="row mb-4">
                 <div className="col d-flex justify-content-center">
-            
                     <div className="form-check">
-                        <input className="form-check-input" type="checkbox" value="" id="form2Example31" />
-                        <label className="form-check-label" for="form2Example31"> Recordar </label>
+                        <input 
+                            name="todoCheck"
+                            className="form-check-input" 
+                            type="checkbox" 
+                            checked={todo.todoCheck} 
+                            id="form2Example31"
+                            onChange={handleChange}
+                        />
+                        <label className="form-check-label"> Recordar </label>
                     </div>
                 </div>
       
@@ -35,14 +79,13 @@ function LoginPac(){
                     <a href="#!">¿Olvidaste tu contraseña?</a>
                 </div>
             </div>
-            <Link to="/MisCitas">"<a className="btn btn-primary btn-block mb-4" href="/">
+            <Link to="/MisCitas"><button className="btn btn-primary" type="submit">
                 Iniciar Sesión
-            </a></Link>
+            </button></Link>
             <div className="text-center">
-                <p>¿No estas registrado? <Link to="/registro_pac"><a href="/">Registrar</a></Link></p>
-                
+                <p>¿No estas registrado? <Link to="/registro_pac">Registrar</Link></p>
             </div>
-        </div>
+        </form>
     </div>
     
 }

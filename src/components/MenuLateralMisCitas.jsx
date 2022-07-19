@@ -7,10 +7,10 @@ function MenuLateralMisCitas (){
             <ul className="nav nav-vertical d-none d-sm-block">
                 <li className="nav nav-vertica nav-header">Secciones</li>
                 <li className="nav-item">
-                    <Link to="/MisCitas"><a className="nav-link active" href="/">Mis citas</a></Link>
+                    <Link className="nav-link active" to="/MisCitas">Mis citas</Link>
                 </li>
                 <li className="nav-item">
-                    <Link to="/reservaCita"><a className="nav-link active" href="/">Reservar cita</a></Link>
+                    <Link className="nav-link active" to="/reservaCita">Reservar cita</Link>
                 </li>
                 <li className="nav nav-vertica nav-header">Comunicacion con especialistas</li>
                 <li className="nav-item">
