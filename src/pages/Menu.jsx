@@ -10,25 +10,26 @@ import doctor_neumologo from '../recursos/doctor_neumologo.jpg'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import estilo from '../recursos/estilo.css'
 import { useEffect } from 'react';
-
-
-
+/*
+  
+*/
 
 
 function Menu(){
   const [ListaDoctores, setListaDoctores]= useState([])
+  useEffect(()=>{
+    const dataFetch = async() => { 
+    let url = "https://backend-clinica8484.herokuapp.com/doc"
+    const resp = await fetch(url)
+    const data = await resp.json()
+    setListaDoctores(data)
+  }
+  dataFetch()
+  
+  },[])
+  console.log(ListaDoctores)
 
-useEffect(()=>{
-  const dataFetch = async() => { 
-  let url = "http://localhost:4000/doc"
-  const resp = await fetch(url)
-  const data = await resp.json()
-  setListaDoctores(data)
-}
-dataFetch()
 
-},[])
-console.log(ListaDoctores)
 
     return <div>
 
@@ -40,10 +41,10 @@ console.log(ListaDoctores)
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav"  style={{margintop: '15px'}}>
             <li className="nav-item active">
-              <a className="nav-link" href="/perfil.html"> </a>
+              <a className="nav-link" href="/perfil.html"> PERFIL</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#"></a>
+              <a className="nav-link" href="#">CITAS</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/#">CALENDARIO</a>
@@ -88,19 +89,19 @@ console.log(ListaDoctores)
               <div className="row">
                 <div className="col-lg-2"><img src={icon_email} className="logo" alt=' '/></div>
                 <div className="col-lg-7">
-                  <p><b><h3>{ListaDoctores[0].id}</h3></b></p>
+                  <p><b><h3>{ListaDoctores[0].correo}</h3></b></p>
                 </div>
               </div>
               <div className="row">
                 <div className="col-lg-2"><img src={icon_email} className="logo" alt=' '/></div>
                 <div className="col-lg-7">
-                  <p><b>990226110</b></p>
+                  <p><b>{ListaDoctores[0].especialidad}</b></p>
                 </div>
               </div>
               <div className="row">
                 <div className="col-lg-2"><img src={location_icon} className="logo" alt=' '/></div>
                 <div className="col-lg-7">
-                  <p><b></b></p>
+                  <p><b>{ListaDoctores[0].telefono}</b></p>
                 </div>
               </div>
             </div>
@@ -109,11 +110,11 @@ console.log(ListaDoctores)
         <div className="col-lg-3" >
           <h2 className="kind">Consultorio</h2>
           <div className="row" id="comp_consult"><img src={location_icon} className="logo" alt=' ' />
-            Av.Javier Prado 1721
+            {ListaDoctores[0].consultorio1}
             </div>
           
           <div className="row" id="comp_consult"><img src={location_icon} className="logo" alt=' '/>
-            Av.Arequipa 1209
+          {ListaDoctores[0].consultorio2}
             </div>
           
           
@@ -129,12 +130,12 @@ console.log(ListaDoctores)
             Nro. De cuenta Soles Bcp:
             </div>
              
-            <p>6545-8465-4646-4656</p> 
+            <p>{ListaDoctores[0].nro_cuenta_bcp}</p> 
           <div className="row" id="comp_consult"><img src={card} className="logo" alt=' '/>
             Nro. Banco de la Nacion: 
             </div>
             
-            <p>4556-3992-1354-3134</p> 
+            <p>{ListaDoctores[0].nro_cuenta_banco_nacion}</p> 
           <div className="row" id="comp_consult"><img src={card} className="logo" alt=' '/>
             Disponibilidad de atención:
             <p>LUNES-SABADO. 8:00AM-18:00PM</p>
