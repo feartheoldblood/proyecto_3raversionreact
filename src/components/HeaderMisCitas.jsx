@@ -12,9 +12,9 @@ function HeaderMisCitas () {
                     </div>
                 </div>
                 <div className="col-4 text-right">
-                    <Link to="/#"><a href="/menu.html" className="btn btn-lg btn-light mt-2 d-none d-sm-inline-flex">
-                        Cerrar
-                    </a></Link>
+                    <Link className="btn btn-lg btn-light mt-2 d-none d-sm-inline-flex" to="/login_paciente">
+                        Cerrar Sesión
+                    </Link>
                 </div>
             </div>
     </div>

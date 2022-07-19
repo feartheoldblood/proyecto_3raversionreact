@@ -12,9 +12,9 @@ export default function HeaderReserva (){
                 </div>
             </div>
             <div className="col-4 text-right">
-                <Link to="/MisCitas"><a href="/miscitas.html" className="btn btn-lg btn-light mt-2 d-none d-sm-inline-flex">
+                <Link to="/MisCitas" className="btn btn-lg btn-light mt-2 d-none d-sm-inline-flex">
                     Volver
-                </a></Link>
+                </Link>
             </div>
         </div>
     </div>

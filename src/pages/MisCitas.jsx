@@ -26,7 +26,7 @@ function MisCitas (){
                         <section>
                             <div className="row">
                                 <div className="col-md-9">
-                                    <PanelUsuarioCitas /> 
+                                    <PanelUsuarioCitas />
                                 </div>
                                 <MenuLateralMisCitas/>
                             </div>
