@@ -1,33 +1,28 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-
-
-
 export default function PagoCita(){
 
     const [todo,setTodo]=useState({
         todoTipo: 'Visa',
         todoNumero: '',
         todoVenci: '',
-        todoNombre: ''
-
+        todoNombre: '',
     })
     const handleSubmit = (e) => {
         e.preventDefault()
-
-        console.log(todo)
     };
 
+
+
     const handleChange = e => {
-        console.log(e.target.value)
-        console.log(e.target.name)
+        const {name, value, checked, type} = e.target
 
         
 
         setTodo({
             ...todo,
-            [e.target.name]: e.target.value
+            [name]: type === "checkbox" ? checked : value,
         })
     };
 
@@ -67,6 +62,7 @@ export default function PagoCita(){
                                         className="form-select" 
                                         aria-label="Default select example"
                                         onChange={handleChange}
+                                        value={todo.todoTipo}
                                     >
                                         <option value="Visa">Visa</option>
                                         <option value="MasterCard">MasterCard</option>
@@ -85,6 +81,7 @@ export default function PagoCita(){
                                         type="tel" 
                                         className="form-control inspectletIgnore"
                                         onChange={handleChange}
+                                        value={todo.todoNumero}
                                         required
                                     />
                                 </div>
@@ -95,6 +92,7 @@ export default function PagoCita(){
                                         type="moth" 
                                         className="form-control inspectletIgnore"
                                         onChange={handleChange}
+                                        value={todo.todoVenci}
                                         required
                                     />
                                 </div>
@@ -106,8 +104,21 @@ export default function PagoCita(){
                                         type="text" 
                                         className="form-control inspectletIgnore"
                                         onChange={handleChange}
+                                        value={todo.todoNombre}
                                         required
                                     />
+                                </div>
+                                <div className="form-check">
+                                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
+                                    <label className="form-check-label" htmlFor="flexRadioDefault1">
+                                        Deseo que los medicamentos se envíen a mi dirección
+                                    </label>
+                                </div>
+                                <div className="form-check">
+                                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked/>
+                                    <label className="form-check-label" htmlFor="flexRadioDefault2">
+                                        Las compras se realizarán por mi cuenta
+                                    </label>
                                 </div>
                             </div>
                         </div>
