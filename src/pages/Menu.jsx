@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useState } from 'react';
 import {Component} from 'react';
 import black_star from '../recursos/black_star.png'
 import money from '../recursos/money.png'
@@ -22,7 +23,7 @@ useEffect(()=>{
   let url = "http://localhost:4000/doc"
   const resp = await fetch(url)
   const data = await resp.json()
-    setListaDoctores(data)
+  setListaDoctores(data)
 }
 dataFetch()
 
@@ -39,10 +40,10 @@ console.log(ListaDoctores)
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav"  style={{margintop: '15px'}}>
             <li className="nav-item active">
-              <a className="nav-link" href="/perfil.html">{ListaDoctores.id} </a>
+              <a className="nav-link" href="/perfil.html">{ListaDoctores[0].id} </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">{JSON.stringify(ListaDoctores.nombre)}</a>
+              <a className="nav-link" href="#">{(ListaDoctores[0].nombre)}</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/#">CALENDARIO</a>
@@ -83,7 +84,7 @@ console.log(ListaDoctores)
         
             </div>
             <div className="col-lg-6" id="inicio">
-            <h1 >{ListaDoctores[0].id}e</h1>
+            <h1 >{ListaDoctores[0].id}</h1>
               <div className="row">
                 <div className="col-lg-2"><img src={icon_email} className="logo" alt=' '/></div>
                 <div className="col-lg-7">
