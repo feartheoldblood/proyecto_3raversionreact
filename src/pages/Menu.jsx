@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Component} from 'react';
 import black_star from '../recursos/black_star.png'
 import money from '../recursos/money.png'
@@ -8,7 +8,27 @@ import location_icon from '../recursos/location_icon.jpg'
 import doctor_neumologo from '../recursos/doctor_neumologo.jpg'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import estilo from '../recursos/estilo.css'
+import { useEffect } from 'react';
+
+
+
+
+
 function Menu(){
+  const [ListaDoctores, setListaDoctores]= useState([])
+
+useEffect(()=>{
+  const dataFetch = async() => { 
+  let url = "http://localhost:4000/doc"
+  const resp = await fetch(url)
+  const data = await resp.json()
+    setListaDoctores(data)
+}
+dataFetch()
+
+},[])
+console.log(ListaDoctores)
+
     return <div>
 
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -19,10 +39,10 @@ function Menu(){
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav"  style={{margintop: '15px'}}>
             <li className="nav-item active">
-              <a className="nav-link" href="/perfil.html">PERFIL </a>
+              <a className="nav-link" href="/perfil.html">{ListaDoctores.id} </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">CITAS</a>
+              <a className="nav-link" href="#">{JSON.stringify(ListaDoctores.nombre)}</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/#">CALENDARIO</a>
@@ -63,11 +83,11 @@ function Menu(){
         
             </div>
             <div className="col-lg-6" id="inicio">
-            <h1 >Dr. Christian Moore</h1>
+            <h1 >{ListaDoctores[0].id}e</h1>
               <div className="row">
                 <div className="col-lg-2"><img src={icon_email} className="logo" alt=' '/></div>
                 <div className="col-lg-7">
-                  <p><b>Chrisitan_moore@gmail.com</b></p>
+                  <p><b>{ListaDoctores[0].correo}</b></p>
                 </div>
               </div>
               <div className="row">
@@ -79,7 +99,7 @@ function Menu(){
               <div className="row">
                 <div className="col-lg-2"><img src={location_icon} className="logo" alt=' '/></div>
                 <div className="col-lg-7">
-                  <p><b>Pediatra</b></p>
+                  <p><b>{ListaDoctores[0].especialidad}</b></p>
                 </div>
               </div>
             </div>
