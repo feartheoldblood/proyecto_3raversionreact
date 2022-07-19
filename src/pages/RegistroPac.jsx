@@ -9,6 +9,19 @@ const mystyle = {
 }
 function RegistroPac() {
 
+    const [ListaPacientes, setListaPacientes]= useState([])
+    useEffect(()=>{
+        const dataFetch = async() => { 
+        let url = "https://backend-clinica8484.herokuapp.com/pac"
+        const resp = await fetch(url)
+        const data = await resp.json()
+        setListaDoctores(data)
+    }
+    dataFetch()
+  
+    },[])
+    console.log(ListaDoctores)
+
     const [todo,setTodo] = useState({
         todoNombres: '',
         todoPaterno: '',

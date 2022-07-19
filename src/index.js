@@ -45,6 +45,7 @@ root.render(
         <Route path='/MisCitas' element={<MisCitas/>}/>
         <Route path='/reservaCita' element={<ReservarCita/>}/>
         <Route path='/Pago' element={<PagoCita/>}/>
+        <Route path='/Guardar' elemento={<Menu/>}/>
         
      </Routes>
     </BrowserRouter>
