@@ -30,7 +30,7 @@ root.render(
       <Route path='/home' element={<Decide/>}/>
       <Route path='/menu' element={<Menu/>}/>
         <Route path='/cale' element={<Calendario/>}/>
-        <Route path='/weed' element={<Pag_principal/>}/>
+        <Route path='/pagprincipal' element={<Pag_principal/>}/>
         <Route path='/dia1' element={<Hora_dia1/>}/>
         <Route path='/dia2' element={<Hora_dia2/>}/>
         <Route path='/dia3' element={<Hora_dia3/>}/>
@@ -47,5 +47,6 @@ root.render(
     </BrowserRouter>
     
   </React.StrictMode>
+  
 );
 reportWebVitals();
